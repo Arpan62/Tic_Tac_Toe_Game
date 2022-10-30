@@ -78,7 +78,7 @@ bool gameover(){
         }
     }
     draw = true;
-    return false;
+    return true;
 }
 
 int main()
@@ -92,10 +92,14 @@ int main()
     }
     if(turn == 'X' && draw == false){
         cout<<"\n\nCongratulations!Player with 'O' has won the game";
+        display_board();
     }
     else if(turn == 'O' && draw == false){
         cout<<"\n\nCongratulations!Player with 'X' has won the game";
+        display_board();
     }
-    else
+    else{
     cout<<"\n\nGAME DRAW!!!\n\n";
+    display_board();
+    }
 }
